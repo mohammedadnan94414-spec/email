@@ -18,7 +18,7 @@ if st.button("predict"):
         st.warning("please enter an email message")
     else:
         #convert the email text into vectors 
-        email_vectors = vectorizer.transform([email])
+        email_vectors = Vectorizer.transform([email])
         prediction = model.predict(email_vectors)
     # display the result 
     if prediction[0] == 'spam':
